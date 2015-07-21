@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="market-m:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="market-m-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="market-m:war exploded" />
-    </root>
-  </artifact>
-</component>
