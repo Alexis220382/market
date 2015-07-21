@@ -35,7 +35,7 @@ public class SellerDAO {
 
     private Connection getConnection() throws MyException {
         try {
-            prop.load(getClass().getClassLoader().getResourceAsStream("resourses/config.properties"));
+            prop.load(getClass().getClassLoader().getResourceAsStream("config.properties"));
             // Подгрузка драйвера БД
             Class.forName(prop.getProperty("Driver")).newInstance();
             return DriverManager.getConnection(prop.getProperty("database"),

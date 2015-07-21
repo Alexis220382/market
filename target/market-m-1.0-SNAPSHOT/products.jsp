@@ -1,11 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: B50-30
-  Date: 01.07.2015
-  Time: 9:33
-  To change this template use File | Settings | File Templates.
---%>
-
 <%@ page import="java.util.List"%>
 <%@ page import="dto.Product"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

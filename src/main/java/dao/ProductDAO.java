@@ -38,7 +38,7 @@ public class ProductDAO {
         //Открываем поток для чтения данных из файла config.properties и
         //загружаем в поток данные из файла config.properties
         try {
-            prop.load(getClass().getClassLoader().getResourceAsStream("resourses/config.properties"));
+            prop.load(getClass().getClassLoader().getResourceAsStream("config.properties"));
             // Подгрузка драйвера БД
             Class.forName(prop.getProperty("Driver")).newInstance();
             return DriverManager.getConnection(prop.getProperty("database"),

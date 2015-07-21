@@ -5,21 +5,16 @@ import dto.Resulting;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 
 public class ResultingDAO {
     
     private Properties prop = new Properties();
-    private Resulting result;
     private Connection con;
     private PreparedStatement addResultSt;
     private PreparedStatement removeResultSt;
-    private ResultSet rs;
 
     public ResultingDAO() throws MyException {
         try {
@@ -32,7 +27,7 @@ public class ResultingDAO {
 
     private Connection getConnection() throws MyException {
         try {
-            prop.load(getClass().getClassLoader().getResourceAsStream("resourses/config.properties"));
+            prop.load(getClass().getClassLoader().getResourceAsStream("config.properties"));
             // Подгрузка драйвера БД
             Class.forName(prop.getProperty("Driver")).newInstance();
             return DriverManager.getConnection(prop.getProperty("database"),

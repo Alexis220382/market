@@ -7,8 +7,6 @@
 --%>
 
 <%@ page import="dto.Seller"%>
-<%@ page import="dao.CombineQuerryDAO"%>
-<%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.CombineQuerry"%>
 <%@ page import="java.util.List"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -94,25 +92,25 @@
   <%for (CombineQuerry combineQuerry : (List<CombineQuerry>) request.getAttribute("combineQuerryList")) {%>
   <tr>
     <td>
-      <input type="text" name="txtLastName" value="<%=combineQuerry.getLastName()%>" />
+      <%=combineQuerry.getLastName()%>
     </td>
     <td>
-      <input type="text" name="txtFirstName" value="<%=combineQuerry.getFirstName()%>" />
+      <%=combineQuerry.getFirstName()%>
     </td>
     <td>
-      <input type="text" name="txtSecondName" value="<%=combineQuerry.getSecondName()%>" />
+      <%=combineQuerry.getSecondName()%>
     </td>
     <td>
-      <input type="text" name="txtProduct" value="<%=combineQuerry.getDescription()%>"/>
+      <%=combineQuerry.getDescription()%>
     </td>
     <td>
-      <input type="text" name="txtRate" value="<%=String.valueOf(combineQuerry.getRateResult())%>" />
+      <%=String.valueOf(combineQuerry.getRateResult())%>
     </td>
     <td>
-      <input type="text" name="txtQuantity" value="<%=String.valueOf(combineQuerry.getQuantityResult())%>" />
+      <%=String.valueOf(combineQuerry.getQuantityResult())%>
     </td>
     <td>
-      <input type="text" name="txtDate" value="<%=combineQuerry.getDateResult()%>" />
+      <%=combineQuerry.getDateResult()%>
     </td>
   </tr>
   <%fl = (combineQuerry.getRateResult()*combineQuerry.getQuantityResult()) + fl;%>
@@ -120,7 +118,7 @@
   </tbody>
 </table>
 <h3 align="center">During this period, your salary was $
-  <input type="text" name="txtSalaryResult" value="<%=fl/7.6923%>"> <!--13% salary-->
+  <%=fl/7.6923%>  <!--13% salary-->
 </h3>
 <%}%>
 </body>
