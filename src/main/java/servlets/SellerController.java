@@ -1,7 +1,7 @@
 package servlets;
 
 import javax.servlet.annotation.WebServlet;
-import MyException.MyException;
+import myException.MyException;
 import dao.ResultingDAO;
 import dao.SellerDAO;
 import dto.Seller;

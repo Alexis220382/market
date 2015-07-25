@@ -1,7 +1,7 @@
 package servlets;
 
 import javax.servlet.annotation.WebServlet;
-import MyException.MyException;
+import myException.MyException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;

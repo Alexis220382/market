@@ -1,6 +1,6 @@
 package servlets;
 
-import MyException.MyException;
+import myException.MyException;
 import dao.SellerDAO;
 import dto.Seller;
 import javax.servlet.ServletException;

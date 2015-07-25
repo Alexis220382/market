@@ -1,9 +1,8 @@
 package dao;
 
-import MyException.MyException;
+import myException.MyException;
 import dto.Resulting;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Properties;
@@ -18,23 +17,11 @@ public class ResultingDAO {
 
     public ResultingDAO() throws MyException {
         try {
-            con = getConnection();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            throw new MyException("Соединение с базой данных не установлено");
-        }
-    }
-
-    private Connection getConnection() throws MyException {
-        try {
             prop.load(getClass().getClassLoader().getResourceAsStream("config.properties"));
-            // Подгрузка драйвера БД
-            Class.forName(prop.getProperty("Driver")).newInstance();
-            return DriverManager.getConnection(prop.getProperty("database"),
-                    prop.getProperty("user"), prop.getProperty("password"));
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            throw new MyException("Ошибка!\nОтсутствует соединение с базой данных");
+            con = new UtilJDBC().getConnection();
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new MyException("\"Ошибка!\\nОтсутствует соединение с базой данных\"");
         }
     }
 
