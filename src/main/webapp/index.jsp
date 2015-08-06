@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: B50-30
-  Date: 01.07.2015
-  Time: 9:22
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,10 +6,10 @@
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form action="SellerController" class="login">
-  <p class="forgot-password"><a href="SellerController">Registration</a></p>
+<form class="login">
+  <p class="forgot-password"><a href="sellercontroller.form">Registration</a></p>
 </form>
-<form action="LoginController" class="login">
+<form action="logincontroller.form" class="login">
   <p>
     <label for="login">Login:</label>
     <input type="text" name="login" id="login" value="Write your last name" required>
